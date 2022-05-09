@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>五目並べ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://meyu-fuwafuwa.com/wp-content/themes/WP_20211210/css/destyle.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<main>
+    <div id="gomoku" class="main-wrap">
+        <div class="main-inner">
+            <h2>五目並べ</h2>
+            <div class="gomoku-wrap">
+                <div id="gomoku-left" class="gomoku-left">
+                    <canvas id="myCanvas" width="" height=""></canvas>
+                </div>
+                <div class="gomoku-right">
+                    <div id="turn_you"><p>あなたのターンです</p></div>
+                    <div id="turn_com" class="none"><p>コンピューター考え中…</p></div>
+                    <div id="win" class="none"><img src="./images/win.png"></div>
+                    <div id="lose" class="none"><img src="./images/lose.png"></div>
+                    <div id="hikiwake" class="none"><img src="./images/hikiwake.png"></div>
+                </div>
+            </div>
+            <div class="btn-radius">
+                <a href="javascript:location.reload();">最初からあそぶ</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <div id="modal" class="modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="modal__content">
+            <h2>五目並べ</h2>
+            <p>あなた：先攻<br>COM：後攻</p>
+            <p>縦、横、斜めのいずれかに5つ自分のマークを並べた方が勝ちです。</p>
+            <div class="btn-radius">
+                <a href="javascript:modalClose();">スタート</a>
+            </div>
+        </div><!--modal__inner-->
+    </div><!--modal-->
+
+<script src="./script.js">
+</script>
+
+</body>
+</html>
