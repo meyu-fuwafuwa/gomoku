@@ -1,47 +1,314 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>五目並べ</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://meyu-fuwafuwa.com/wp-content/themes/WP_20211210/css/destyle.css">
-    <link rel="stylesheet" href="./style.css">
+<meta charset="utf-8">
+	<title>はしもとあびりん農場</title>
+	<meta name="Description" content="はしもとあびりん農場は○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○、○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○。">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="img/favicon.ico">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/index.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery-3.7.0.min.js"></script>
 </head>
+
 <body>
-<main>
-    <div id="gomoku" class="main-wrap">
-        <div class="main-inner">
-            <h2>五目並べ</h2>
-            <div class="gomoku-wrap">
-                <div id="gomoku-left" class="gomoku-left">
-                    <canvas id="myCanvas" width="" height=""></canvas>
-                </div>
-                <div class="gomoku-right">
-                    <div id="turn_you"><p>あなたのターンです</p></div>
-                    <div id="turn_com" class="none"><p>コンピューター考え中…</p></div>
-                    <div id="win" class="none"><img src="./images/win.png"></div>
-                    <div id="lose" class="none"><img src="./images/lose.png"></div>
-                    <div id="hikiwake" class="none"><img src="./images/hikiwake.png"></div>
-                </div>
-            </div>
-            <div class="btn-radius">
-                <a href="javascript:location.reload();">最初からあそぶ</a>
-            </div>
-        </div>
-    </div>
-</main>
-    <div id="modal" class="modal js-modal">
-        <div class="modal__bg js-modal-close"></div>
-        <div class="modal__content">
-            <h2>五目並べ</h2>
-            <p>あなた：先攻<br>COM：後攻</p>
-            <p>縦、横、斜めのいずれかに5つ自分のマークを並べた方が勝ちです。</p>
-            <div class="btn-radius">
-                <a href="javascript:modalClose();">スタート</a>
-            </div>
-        </div><!--modal__inner-->
-    </div><!--modal-->
-<script src="./script.js">
-</script>
+	
+	<header>
+		<div class="wrap header-wrap">
+			<h1 class="site-title">
+				<a href="index.html">
+					<img src="img/logo.svg" alt="logo">
+				</a>
+			</h1>
+			<div class="openbtn">
+				<span></span><span></span><span></span>
+			</div>
+		</div>
+	</header>
+	
+	<nav class="nav">
+		<div class="wrap">
+			<ul class="nav_menu_ul">
+				<li class="nav_menu_li"><a href="#">トップページ</a></li>
+				<li class="nav_menu_li"><a href="#">お知らせ一覧</a></li>
+				<li class="nav_menu_li"><a href="#">農園体験プログラム</a></li>
+				<li class="nav_menu_li"><a href="#">収穫物一覧</a></li>
+				<li class="nav_menu_li"><a href="#">営業時間・アクセス</a></li>
+				<li class="nav_menu_li"><a href="#">お問い合わせ</a></li>
+			</ul>
+		</div>
+	</nav>
+	
+	<main>
+		<div id="mainvisual">
+			<div class="mainvisual-wrap">
+				<div id="mainvisual-main" class="mainvisual-main">
+					<img src="img/mainvisual1.jpg" alt="メインビジュアル">
+					<img src="img/mainvisual2.jpg" alt="メインビジュアル">
+					<img src="img/mainvisual3.jpg" alt="メインビジュアル">
+				</div>
+			</div>
+			<div class="mainvisual-text">
+				<img src="img/logo.svg" alt="ロゴマーク">
+				<p>
+					はしもとあびりん農園は<br>
+					○○県○○市にある観光農園です。<br>
+					さまざまな野菜・フルーツと<br class="sp-only">豊かな自然が<br>
+					あなたを待っています。
+				</p>
+			</div>
+		</div>
+		<section id="news">
+			<div class="contents fadein">
+				<div class="news-img">
+					<img src="img/news-ue.PNG" alt="キャラクター">
+				</div>
+				<div class="news-wrap">
+					<h2 class="news-title">お知らせ</h2>
+					<ul>
+						<li><a href="#"><date>2023.08.01</date> ××××の収穫が始まりました！</a></li>
+						<li><a href="#"><date>2023.08.01</date>〇月〇日は休園日です</a></li>
+						<li><a href="#"><date>2023.08.01</date> ホームページリニューアルのお知らせ</a></li>
+					</ul>
+					<div class="news-page">
+						<a href="#">お知らせ一覧を見る</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section id="event" class="bg-border">
+			<div class="contents fadein">
+				<h2 class="sec-title"><span>農園体験プログラム</span></h2>
+				<div class="event-box">
+					<div class="event-item">
+						<h3 class="contents-title">アクティビティやイベントが<br>盛りだくさん！</h3>
+						<p>
+							ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ
+						</p>
+						<p>
+							ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ
+						</p>
+					</div>
+					<div class="event-item">
+						<img src="img/event1.jpg" alt="イベントの様子">
+					</div>
+					<div class="event-item">
+						<img src="img/event2.jpg" alt="イベントの様子">
+					</div>
+					<div class="event-item">
+						<img src="img/event3.jpg" alt="イベントの様子">
+					</div>
+				</div>
+				<a href="#" class="btn">農園プログラムの詳細</a>
+			</div>
+		</section>
+		
+
+		
+		
+		<section id="harvest">
+			<div class="contents fadein">
+				<h2 class="sec-title"><span>収穫物一覧</span></h2>
+				<ul>
+					<li><a href="#"><img src="img/harvest1.jpg"><a></a></li>
+					<li><a href="#"><img src="img/harvest2.jpg"><a></a></li>
+					<li><a href="#"><img src="img/harvest3.jpg"><a></a></li>
+					<li><a href="#"><img src="img/harvest4.jpg"><a></a></li>
+				</ul>
+				<a href="#" class="btn">収穫物一覧を見る</a>
+			</div>
+		</section>
+		
+		<section id="shop" class="bg-border">
+			<div class="contents fadein">
+				<h2 class="sec-title"><span>収穫農産物の有効活用</span></h2>
+				<div class="shop-box">
+					<div class="shop-item">
+						<h3 class="contents-title">
+							近隣の道の駅や<br>
+							販売所にて<br>
+							農作物加工商品を<br>
+							販売しています
+						</h3>
+						<p>
+							ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ
+						</p>
+						<p>
+							ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ
+						</p>
+						<p>
+							ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ
+						</p>
+					</div>
+					<div class="event-item">
+						<ul>
+							<li><img src="img/shop.png" alt="商品"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="online">
+			<div class="contents fadein">
+				<h2 class="sec-title"><span>オンライン販売</span></h2>
+				<h3 class="contents-title">
+					廃棄量削減を目的に<br>
+					訳あり品としてネット販売しています
+				</h3>
+				<ul class="online-wrap">
+					<li>
+						<a href="#">
+							<div class="online-rank">
+								<img src="img/rank1.PNG" alt="rank1">
+							</div>
+							<div class="online-text">
+								<img src="img/shop1.png" alt="商品">
+								<p class="title">商品１</p>
+								<p class="price">1000円</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="online-rank">
+								<img src="img/rank2.PNG" alt="rank1">
+							</div>
+							<div class="online-text">
+								<img src="img/shop2.png" alt="商品">
+								<p class="title">商品１</p>
+								<p class="price">1000円</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="online-rank">
+								<img src="img/rank3.PNG" alt="rank1">
+							</div>
+							<div class="online-text">
+								<img src="img/shop3.png" alt="商品">
+								<p class="title">商品１</p>
+								<p class="price">1000円</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<a href="#" class="btn">オンラインショップ</a>
+			</div>
+		</section>
+		
+
+		
+		<section id="recruit" class="bg-border">
+			<div class="contents fadein">
+				<h2 class="sec-title"><span>障がい者就労支援事業</span></h2>
+				<div class="recruit-box">
+					<div class="rectuit-item">
+						<img src="img/recruit.png" class="農家で働く人のイラスト">
+					</div>
+					<div class="rectuit-item">
+						<h3 class="contents-title">はしもとあびりん農園で<br>働いてみませんか？</h3>
+						<p>
+							当農園では積極的に障がい者雇用をおこなっております。
+						</p>
+						<ul>
+							<li>ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ</li>
+							<li>ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ</li>
+							<li>ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ</li>
+							<li>ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ</li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="btn">採用エントリー</a>
+			</div>
+		</section>
+		
+		
+		<section id="access">
+			<div class="contents fadein">
+				<h2 class="sec-title"><span>営業時間・アクセス</span></h2>
+				<div class="access-box">
+					<div class="access-item">
+						<dl>
+							<dt>営 業 時 間</dt>
+							<dd>AM9:00 - PM17:00</dd>
+							<dt>休 園 日</dt>
+							<dd>毎週火曜日</dd>
+							<dt>ア ク セ ス</dt>
+							<dd>
+								〒123-1234<br>
+								○○○県○○市○○区XXX 1-2-3<br><br>
+								お車でお越しの場合<br>
+								ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ<br>
+								電車でお越しの場合<br>
+								ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ
+							</dd>
+						</dl>
+					</div>
+					<div class="access-item">
+						<ul>
+							<li><img src="img/map.PNG" alt="地図"></li>
+						</ul>
+					</div>
+				</div>
+				<div class="access-img">
+					<img src="img/driving.png" alt="車に乗っておでかけ">
+				</div>
+			</div>
+		</section>
+		
+	</main>
+	
+	<footer>
+		<div class="footer-wrap">
+			<div class="wrap">
+				<div class="site-title">
+					<a href="index.html">
+						<img src="img/logo.svg" alt="logo">
+					</a>
+				</div>
+				<ul>
+					<li><a href="#">トップページ</a></li>
+					<li><a href="#">お知らせ一覧</a></li>
+					<li><a href="#">農園体験プログラム</a></li>
+					<li><a href="#">収穫物一覧</a></li>
+					<li><a href="#">営業時間・アクセス</a></li>
+					<li><a href="#">お問い合わせ</a></li>
+				</ul>
+				<p class="address">
+					〒123-1234<br>
+					○○○県○○市○○区XXX 1-2-3
+				</p>
+
+				<p class="copyright">&copy; MEI HASHIMOTO</p>
+			</div>
+		</div>
+	</footer>
+
+	
+	<script src="js/script.js"></script>
+	</body>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

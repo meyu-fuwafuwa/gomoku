@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 176.37">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #765656;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: UDDigiKyokashoN-B, 'UD Digi Kyokasho N-B';
+        font-size: 72px;
+      }
+
+      .cls-3 {
+        fill: #f0b7b9;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #f7f8f8;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 20px;
+      }
+    </style>
+  </defs>
+  <g id="_レイヤー_1-2" data-name="レイヤー 1">
+    <text class="cls-2" transform="translate(82 73.35)"><tspan x="0" y="0">はしもと</tspan><tspan x="-72" y="76">あびりん農園</tspan></text>
+    <g>
+      <polygon class="cls-3" points="53.25 118.94 32.97 123.83 22.94 136.58 28.87 146.94 43.14 138.11 51.75 127.94 53.25 118.94"/>
+      <rect class="cls-3" x="317.12" y="96.09" width="35.22" height="16.13"/>
+      <rect class="cls-3" x="381.56" y="96.09" width="48" height="51.61"/>
+      <ellipse class="cls-3" cx="121.39" cy="62.83" rx="8.69" ry="6.6"/>
+      <text class="cls-1" transform="translate(82 73.35)"><tspan x="0" y="0">はしもと</tspan><tspan x="-72" y="76">あびりん農園</tspan></text>
+    </g>
+  </g>
+</svg>
