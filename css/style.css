@@ -1,9 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* ピンク　#f6babc */
-/* みどり　#97b6b8 */
-/*　ちゃいろ　#785757 */
+/* 背景：#ba2636 */
+/*アクセント : #008080*/
 
 
 *{
@@ -25,8 +24,8 @@ html{
 }
 
 body{
-	background-color: #f6babc;
-	color: #785757;
+	background-color: #ba2636;
+	color: #fff;
 	font-weight: bold;
 	font-size: 1.6rem;
 	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
@@ -37,8 +36,33 @@ img{
 	vertical-align: bottom;
 }
 
+.circle {
+    position: relative;
+    overflow: hidden;
+	overflow: hidden;
+	border-radius: 50%;
+	border: 5px solid #333;
+}
+
+.circle::before{
+    content: "";
+    padding-top: 100%;
+    display: block;
+}
+.circle img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+}
+
+
+
+
 a{
-	color: #785757;
+	color: #333;
 }
 
 .wrap{
@@ -48,21 +72,15 @@ a{
 }
 .contents{
 	margin: 0 auto;
-	padding: 0 5%;
+	padding: 0 4%;
 	max-width: 1280px;
 }
 main{
+    overflow: hidden;
 }
 section{
-	padding: 150px 0;
+	padding: 100px 0;
 }
-section.bg-border{
-	margin: 0 5%;
-	padding: 150px 0;
-	background: repeating-linear-gradient(-135deg, #f6babc, #f6babc 5px, #f8cecf 5px, #f8cecf 10px);
-	border-radius: 150px;
-}
-
 .site-title {
 	margin-top: 15px;
 	width: 120px;
@@ -74,21 +92,15 @@ section.bg-border{
 
 .sec-title{
 	text-align: center;
-}
-.sec-title span{
-	display: inline-block;
-	font-size: 4.2rem;
+	font-size: 3.6rem;
 	margin-bottom: 40px;
-	padding-bottom: 20px;
-	line-height: 1;
-	color: #785757;
-	border-bottom: 5px dashed #fff;
 }
 .contents-title{
 	text-align: center;
-	font-size: 3.2rem;
+	font-size: 2.4rem;
 	margin-bottom: 40px;
 }
+
 
 a.btn {
 	display: block;
@@ -99,15 +111,15 @@ a.btn {
 	padding: 20px 40px;
 	font-weight: bold;
 	font-size: 2.4rem;
-	border: 5px solid #97b6b8;
-	background: #97b6b8;
+	border: 5px solid #333;
+	background: #008080;
 	color: #fff;
-	border-radius: 100vh;
+	border-radius: 30px;
 	transition: 0.5s;
 }
 a.btn:hover {
-	color: #97b6b8;
 	background: #fff;
+	color: #333;
 }
 
 .fadein {
@@ -140,7 +152,7 @@ header{
 
 .openbtn{
 	position: relative;
-	background-color: #97b6b8;
+	background-color: #008080;
 	cursor: pointer;
     width: 70px;
     height: 100px;
@@ -200,11 +212,13 @@ header{
 	padding: 0 5% 150px;
 	border-radius: 0 0 150px 150px;
 	transition: all 0.5s;
-	background-color: #97b6b8;
+	background-color: #008080;
 	color: #fff;
+	opacity: 0;
 }
 .nav.show {
 	top: 0;
+	opacity: 1.0;
 }
 
 .nav ul{
@@ -243,13 +257,37 @@ header{
 footer{
 	color: #fff;
 	text-align: center;
+	position: relative;
 }
+
+#footer-pagetop{
+    width: 126px;
+    height: 126px;
+    background-color: #008080;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 5;
+}
+#footer-pagetop img{
+	width: 50px;
+}
+#footer-pagetop span{
+	color: #fff;
+}
+
 footer .site-title{
-	margin: 0 auto 20px;
+	margin: 0 auto 40px;
 }
 .footer-wrap{
-	padding-top: 40px;
-	background-color: #97b6b8;
+	padding-top: 80px;
+	background-color: #008080;
 }
 .footer-title {
 	width: 200px;
@@ -260,6 +298,7 @@ footer .site-title{
 	display: block;
 }
 footer ul{
+	margin-bottom: 40px;
 }
 footer ul li{
 	display: inline-block;
@@ -278,7 +317,7 @@ footer ul li a:hover{
 
 
 footer .address{
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 footer .copyright{

@@ -9,6 +9,7 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<link href="css/index.css" rel="stylesheet" type="text/css">
 	<script src="js/jquery-3.7.0.min.js"></script>
+	<script src=”js/slick.min.js”></script>
 </head>
 
 <body>
@@ -42,22 +43,171 @@
 	<main>
 		<div id="mainvisual">
 			<div class="mainvisual-wrap">
-				<div id="mainvisual-main" class="mainvisual-main">
-					<img src="img/mainvisual1.jpg" alt="メインビジュアル">
-					<img src="img/mainvisual2.jpg" alt="メインビジュアル">
-					<img src="img/mainvisual3.jpg" alt="メインビジュアル">
+				<div id="mainvisual-gara" class="mainvisual-gara">
+					<img src="img/bg2.jpg" alt="柄">
 				</div>
-			</div>
-			<div class="mainvisual-text">
-				<img src="img/logo.svg" alt="ロゴマーク">
-				<p>
-					はしもとあびりん農園は<br>
-					○○県○○市にある観光農園です。<br>
-					さまざまな野菜・フルーツと<br class="sp-only">豊かな自然が<br>
-					あなたを待っています。
-				</p>
+				<div class="mainvisual-circle">
+					<img src="img/mainvisual.png" alt="ロゴマーク">
+				</div>
+				<div class="scrolldown"><span>Scroll</span></div>
 			</div>
 		</div>
+		
+		<section id="about">
+			<div class="contents fadein">
+				<div class="about-wrap">
+					<div class="about-item about-img">
+						<img src="img/about.png" alt="女の子">
+					</div>
+					<div class="about-item about-center">
+						<p class="tategaki">
+							はしもとあびりん農園とは<br>
+							〇〇県〇〇市にある観光農園です。<br>
+							様々な野菜・フルーツと豊かな自然が<br>
+							あなたを待っています。
+						</p>
+					</div>
+					<div class="about-item"></div>
+				</div>
+			</div>
+		</section>
+		
+		<section id="gallary">
+			<div class="gallary-wrap">
+				<picture>
+  <source srcset="img/gallary-sp.png" media="(max-width: 767px)">
+  <img src="img/gallary-pc.png" alt="農園の様子">
+</picture>
+
+			</div>
+		</section>
+		
+		<section id="event-harvest">
+			<div class="contents fadein">
+				<div class="flex-box">
+					<div class="flex-item">
+						<div class="flex-img circle">
+							<img src="img/event1.jpg" alt="event">
+						</div>
+						<div class="flex-text">
+							<p class="title">農園体験プログラム</p>
+							<p class="description">アクティビティやイベントが盛りだくさん！ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ</p>
+							<a href="#" class="btn">プログラム詳細</a>
+						</div>
+					</div>
+					<div class="flex-item">
+						<div class="flex-img circle">
+							<img src="img/mainvisual1.jpg" alt="event">
+						</div>
+						<div class="flex-text">
+							<p class="title">収穫物一覧</p>
+							<p class="description">当農園では季節ごとに様々な野菜・フルーツが収穫できます。ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ</p>
+							<a href="#" class="btn">収穫物一覧</a>
+						</div>
+					</div>
+					<div class="flex-item">
+						<div class="flex-img circle">
+							<img src="img/event2.jpg" alt="event">
+						</div>
+						<div class="flex-text">
+							<p class="title">テストテスト</p>
+							<p class="description">ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ</p>
+							<a href="#" class="btn">リンク</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section id="shop">
+			<div class="contents fadein">
+
+				<div class="shop-box">
+					<div class="shop-item">
+					<h2 class="sec-title">収穫農産物の販売</h2>
+					<h3 class="contents-title">
+					近隣の道の駅や販売所にて<br>
+					農作物加工商品として販売しています
+					</h3>
+						<p>
+							ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ
+						</p>
+						<p>
+							ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ
+						</p>
+						<p>
+							ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ
+						</p>
+						<a href="#" class="btn">オンラインショップ</a>
+					</div>
+					<div class="event-item">
+						<img src="img/shop.png" alt="商品">
+					</div>
+				</div>
+			</div>
+		</section>
+		
+
+		<section id="recruit">
+			<div class="contents fadein">
+				<div class="recruit-box">
+					<div class="rectuit-item circle">
+						<img src="img/event2.jpg" class="農家で働く人のイラスト">
+					</div>
+					<div class="rectuit-item">
+				<h2 class="sec-title">障がい者就労支援事業</h2>
+				<h3 class="contents-title">はしもとあびりん農園で<br class="sp-only">働いてみませんか？</h3>
+						<p>
+							当農園では積極的に障がい者雇用をおこなっております。
+						</p>
+						<ul>
+							<li>ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ</li>
+							<li>ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ</li>
+							<li>ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ</li>
+							<li>ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ</li>
+						</ul>
+						<a href="#" class="btn">採用エントリー</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		<section id="access">
+			<div class="contents fadein">
+				<h2 class="sec-title">営業時間・アクセス</h2>
+				<div class="access-box">
+					<div class="access-item">
+						<table class="access-table">
+							<tr>
+								<th>営 業 時 間</th>
+								<td>AM9:00 - PM17:00</td>
+							</tr>
+							<tr>
+								<th>休 園 日</th>
+								<td>毎週火曜日</td>
+							</tr>
+							<tr>
+								<th>ア ク セ ス</th>
+								<td>
+									〒123-1234<br>
+									○○○県○○市○○区XXX 1-2-3<br><br>
+									お車でお越しの場合<br>
+									ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ<br>
+									電車でお越しの場合<br>
+									ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="access-item">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104995.0163729769!2d135.40363682954916!3d34.677570376182786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6553406e2e1%3A0xc55bc16ee46a2fe7!2z5aSn6Ziq5bqc5aSn6Ziq5biC!5e0!3m2!1sja!2sjp!4v1692873388900!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
 		<section id="news">
 			<div class="contents fadein">
 				<div class="news-img">
@@ -77,190 +227,14 @@
 			</div>
 		</section>
 		
-		<section id="event" class="bg-border">
-			<div class="contents fadein">
-				<h2 class="sec-title"><span>農園体験プログラム</span></h2>
-				<div class="event-box">
-					<div class="event-item">
-						<h3 class="contents-title">アクティビティやイベントが<br>盛りだくさん！</h3>
-						<p>
-							ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ
-						</p>
-						<p>
-							ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ
-						</p>
-					</div>
-					<div class="event-item">
-						<img src="img/event1.jpg" alt="イベントの様子">
-					</div>
-					<div class="event-item">
-						<img src="img/event2.jpg" alt="イベントの様子">
-					</div>
-					<div class="event-item">
-						<img src="img/event3.jpg" alt="イベントの様子">
-					</div>
-				</div>
-				<a href="#" class="btn">農園プログラムの詳細</a>
-			</div>
-		</section>
-		
-
-		
-		
-		<section id="harvest">
-			<div class="contents fadein">
-				<h2 class="sec-title"><span>収穫物一覧</span></h2>
-				<ul>
-					<li><a href="#"><img src="img/harvest1.jpg"><a></a></li>
-					<li><a href="#"><img src="img/harvest2.jpg"><a></a></li>
-					<li><a href="#"><img src="img/harvest3.jpg"><a></a></li>
-					<li><a href="#"><img src="img/harvest4.jpg"><a></a></li>
-				</ul>
-				<a href="#" class="btn">収穫物一覧を見る</a>
-			</div>
-		</section>
-		
-		<section id="shop" class="bg-border">
-			<div class="contents fadein">
-				<h2 class="sec-title"><span>収穫農産物の有効活用</span></h2>
-				<div class="shop-box">
-					<div class="shop-item">
-						<h3 class="contents-title">
-							近隣の道の駅や<br>
-							販売所にて<br>
-							農作物加工商品を<br>
-							販売しています
-						</h3>
-						<p>
-							ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ
-						</p>
-						<p>
-							ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ
-						</p>
-						<p>
-							ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ
-						</p>
-					</div>
-					<div class="event-item">
-						<ul>
-							<li><img src="img/shop.png" alt="商品"></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="online">
-			<div class="contents fadein">
-				<h2 class="sec-title"><span>オンライン販売</span></h2>
-				<h3 class="contents-title">
-					廃棄量削減を目的に<br>
-					訳あり品としてネット販売しています
-				</h3>
-				<ul class="online-wrap">
-					<li>
-						<a href="#">
-							<div class="online-rank">
-								<img src="img/rank1.PNG" alt="rank1">
-							</div>
-							<div class="online-text">
-								<img src="img/shop1.png" alt="商品">
-								<p class="title">商品１</p>
-								<p class="price">1000円</p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div class="online-rank">
-								<img src="img/rank2.PNG" alt="rank1">
-							</div>
-							<div class="online-text">
-								<img src="img/shop2.png" alt="商品">
-								<p class="title">商品１</p>
-								<p class="price">1000円</p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div class="online-rank">
-								<img src="img/rank3.PNG" alt="rank1">
-							</div>
-							<div class="online-text">
-								<img src="img/shop3.png" alt="商品">
-								<p class="title">商品１</p>
-								<p class="price">1000円</p>
-							</div>
-						</a>
-					</li>
-				</ul>
-				<a href="#" class="btn">オンラインショップ</a>
-			</div>
-		</section>
-		
-
-		
-		<section id="recruit" class="bg-border">
-			<div class="contents fadein">
-				<h2 class="sec-title"><span>障がい者就労支援事業</span></h2>
-				<div class="recruit-box">
-					<div class="rectuit-item">
-						<img src="img/recruit.png" class="農家で働く人のイラスト">
-					</div>
-					<div class="rectuit-item">
-						<h3 class="contents-title">はしもとあびりん農園で<br>働いてみませんか？</h3>
-						<p>
-							当農園では積極的に障がい者雇用をおこなっております。
-						</p>
-						<ul>
-							<li>ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ</li>
-							<li>ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ</li>
-							<li>ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ</li>
-							<li>ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ</li>
-						</ul>
-					</div>
-				</div>
-				<a href="#" class="btn">採用エントリー</a>
-			</div>
-		</section>
-		
-		
-		<section id="access">
-			<div class="contents fadein">
-				<h2 class="sec-title"><span>営業時間・アクセス</span></h2>
-				<div class="access-box">
-					<div class="access-item">
-						<dl>
-							<dt>営 業 時 間</dt>
-							<dd>AM9:00 - PM17:00</dd>
-							<dt>休 園 日</dt>
-							<dd>毎週火曜日</dd>
-							<dt>ア ク セ ス</dt>
-							<dd>
-								〒123-1234<br>
-								○○○県○○市○○区XXX 1-2-3<br><br>
-								お車でお越しの場合<br>
-								ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ<br>
-								電車でお越しの場合<br>
-								ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ
-							</dd>
-						</dl>
-					</div>
-					<div class="access-item">
-						<ul>
-							<li><img src="img/map.PNG" alt="地図"></li>
-						</ul>
-					</div>
-				</div>
-				<div class="access-img">
-					<img src="img/driving.png" alt="車に乗っておでかけ">
-				</div>
-			</div>
-		</section>
 		
 	</main>
 	
 	<footer>
+			<a id="footer-pagetop" href="#">
+				<img src="img/icon.svg" alt="ページトップ">
+				<span>PAGE TOP</span>
+			</a>
 		<div class="footer-wrap">
 			<div class="wrap">
 				<div class="site-title">

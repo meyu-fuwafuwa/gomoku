@@ -2,54 +2,181 @@
 /* CSS Document */
 
 
-/* ピンク　#f6babc */
-/* みどり　#97b6b8 */
-/*　ちゃいろ　#785757 */
-
 /************************************************************/
 /*mainvisual*/
 /************************************************************/
 .mainvisual-wrap{
 	position: relative;
-}
-.mainvisual-main{
+    overflow: hidden;
 	width: 100%;
 	height: 100vh;
+	margin-bottom: 100px;
+}
+.mainvisual-main{
     overflow: hidden;
     position: relative;
 }
-.mainvisual-main img{
+
+.mainvisual-gara{
+	z-index: 90;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+	width:100%;
+	height: 40vh;
+	text-align: center;
+}
+
+.mainvisual-gara img{
 	height: 100%;
 	object-fit: cover;
-    top: 0;
-    left: 0;
-    position: absolute;
+	
 }
 
-.mainvisual-text{
+.mainvisual-circle{
 	z-index: 100;
-	position: absolute;
+    position: absolute;
     top: 50%;
-    left: 0%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-	width: 100%;
-	text-align:center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+	width:100%;
+	text-align: center;
 }
-.mainvisual-text img{
+.mainvisual-circle img{
+	width: 90%;
+	max-width:80vh;
+}
+
+/*スクロールダウン全体の場所*/
+.scrolldown{
+    /*描画位置※位置は適宜調整してください*/
+	position:absolute;
+	bottom:1%;
+	right:20%;
+    /*矢印の動き1秒かけて永遠にループ*/
+	animation: arrowmove 1s ease-in-out infinite;
+}
+
+/*下からの距離が変化して全体が下→上→下に動く*/
+@keyframes arrowmove{
+      0%{bottom:1%;}
+      50%{bottom:3%;}
+     100%{bottom:1%;}
+ }
+
+/*Scrollテキストの描写*/
+.scrolldown span{
+    /*描画位置*/
+	position: absolute;
+	left:-20px;
+	bottom:10px;
+    /*テキストの形状*/
+	color: #eee;
+	font-size: 0.7rem;
+	letter-spacing: 0.05em;
+	/*縦書き設定*/
+	-ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+/* 矢印の描写 */
+.scrolldown:before {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    right: -6px;
+    /*矢印の形状*/
+    width: 2px;
+    height: 20px;
+    background: #eee;
+    transform: skewX(-31deg);
+}
+
+.scrolldown:after{
+	content:"";
+    /*描画位置*/
+	position: absolute;
+	bottom:0;
+	right:0;
+    /*矢印の形状*/
+	width:2px;
+	height: 50px;
+	background:#eee;
+}
+
+
+/************************************************************/
+/*about*/
+/************************************************************/
+.about-wrap{
+	display: flex;
+	align-items: flex-end;
+}
+.about-item{
+	width: 25%;
+}
+.about-item.about-center{
 	width: 50%;
-	max-width: 500px;
-	margin-bottom: 40px;
+    background-color: #fff;
+	border-radius: 30px;
+	padding: 40px 0;
+	border: 5px solid #333;
 }
-.mainvisual-text p{
-	text-align:center; 
-	font-size: 2.8rem;
-	color: #fff;
-	text-shadow: 3px 3px 3px #785757;
+#about p{
+	font-size: 3.2rem;
+	line-height: 1.5;
+	margin: 0 auto;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	color: #333;
+	position: relative;
 }
 
+/************************************************************/
+/*gallary*/
+/************************************************************/
+.gallary-wrap{
+	margin: 0 auto;
+	max-width: 1500px;
+}
 
+/************************************************************/
+/*event-harvest*/
+/************************************************************/
+#event-harvest .flex-box{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#event-harvest .flex-item{
+	width: 32%;
+	border-radius: 30px;
+	padding: 20px;
+	background-color: #fff;
+	border: 5px solid #333;
+	color: #333;
+}
+#event-harvest .flex-img{
+	margin-bottom: 20px;
+}
+#event-harvest .flex-text .title{
+	text-align: center;
+	font-size: 3.2rem;
+	margin-bottom: 20px;
+	border-bottom: 5px dashed #008080;
+}
+#event-harvest .flex-text .description{
+	margin-bottom: 20px;
+	min-height: 6em;
+}
 
 /************************************************************/
 /*news*/
@@ -69,18 +196,19 @@
 .news-wrap{
 	margin: 0 auto 40px;
 	max-width: 1000px;
-	background-color: #97b6b8;
-	border-radius: 0 50px 0 ;
+	background-color: #fff;
+	color: #333;
+	border-radius: 0 50px 0;
 	padding: 40px 30px;
 	width: 100%;
+	border: 5px solid #333;
 }
 
 #news h2.news-title{
 	text-align: center;
 	font-size: 4.2rem;
 	margin-bottom: 15px;
-	border-bottom: 2px dashed #fff;
-	color: #fff;
+	border-bottom: 2px dashed #008080;
 }
 
 #news ul{
@@ -88,6 +216,7 @@
 	padding: 40px;
 	margin-bottom: 10px;
 	border-radius: 30px;
+	border: 5px solid #333;
 }
 #news ul li{
 	padding: 10px 0;
@@ -137,11 +266,6 @@
 .event-item ul li{
 	margin-bottom: 5px;
 }
-.event-item img{
-	border-radius: 30px;
-	height: 350px;
-	object-fit: cover;
-}
 
 /************************************************************/
 /*harvest*/
@@ -163,6 +287,7 @@
 	border-radius: 50%;
 	border: 5px solid #fff;
 }
+
 #harvest ul li::before{
     content: "";
     padding-top: 100%;
@@ -189,7 +314,7 @@
 .shop-box{
 	display: flex;
 	justify-content: space-between;
-	align-items: center
+	align-items: center;
 }
 .shop-item{
 	width:48%;
@@ -209,33 +334,15 @@
 }
 
 /************************************************************/
-/*online*/
-/************************************************************/
-.online-wrap{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin-bottom: 40px;
-}
-.online-wrap li{
-	width: 32%;
-}
-.online-rank{
-	width:30%;
-	margin: 0 auto;
-}
-.online-text{
-	padding: 30px;
-	border-radius: 30px;
-	background-color: #97b6b8;
-	margin-bottom: 40px;
-}
-
-
-
-/************************************************************/
 /*recruit*/
 /************************************************************/
+#recruit{
+	background-image: url("../img/wave1.svg"), url("../img/wave2.svg");
+	background-position: bottom center, top center;
+	background-repeat: no-repeat, no-repeat;
+	background-size: contain, contain;
+	background-color: #400000;
+}
 .recruit-box{
 	display: flex;
 	justify-content: space-between;
@@ -256,47 +363,44 @@
 	list-style-type: circle;
 	margin-bottom: 5px;
 }
+.rectuit-item ul li:last-child{
+	margin-bottom: 0px;
+}
 /************************************************************/
 /*access*/
 /************************************************************/
 .access-box{
 	display: flex;
 	justify-content: space-between;
-	align-items: center
+	align-items: flex-start;
 }
 .access-item{
 	width:48%;
 	margin-bottom: 40px;
 }
 
-.access-item dl{
-	display: flex;
-	flex-wrap: wrap;
-	border: 5px solid #97b6b8;
+.access-table{
+	border-radius: 30px;
+	overflow: hidden;
 }
-.access-item dl dt{
+.access-table tr{
+	border-bottom: 3px solid #333;
+}
+.access-table tr:last-child{
+	border-bottom: none;
+}
+.access-table th{
 	width: 35%;
 	padding: 40px 10px;
 	text-align: center;
-	background-color: #97b6b8;
+	background-color: #008080;
 	color: #fff;
 }
-.access-item dl dd{
+.access-table td{
 	width: 65%;
 	padding: 40px 10px;
 	background-color: #fff;
-	border-bottom: 3px solid #97b6b8;
-}
-.access-item dl dd:last-child{
-	border-bottom: none;
-}
-
-.access-item img{
-	border-radius: 30px;
-}
-.access-img{
-	margin: 0 auto;
-	max-width:500px;
+	color: #333;
 }
 
 
@@ -311,17 +415,61 @@
 /************************************************************/
 @media screen and ( max-width: 1279px) and (min-width: 768px){
 
+	#event-harvest .flex-item{
+		width: 48%;
+		margin-bottom: 40px;
+	}
 }
 /************************************************************/
 /*sp*/
 /************************************************************/
 @media screen and (max-width: 767px){
-	.mainvisual-text p{
-		text-align:center; 
-		font-size: 2.4rem;
-		color: #fff;
-		text-shadow: 1px 2px 3px #808080;
+	#gallary{
+		padding: 0;
 	}
+	.mainvisual-gara{
+		width: 100%;
+		height: 50vh;
+		top: 0;
+		left: 0;
+		transform: translate(0,0);
+		-webkit-transform: translate(0,0);
+		-ms-transform: translate(0,0);
+	}
+	
+	#event-harvest .flex-box{
+		flex-direction: column;
+	}
+	#event-harvest .flex-item{
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	
+	#about .contents{
+		padding: 0;
+	}
+	.about-wrap{
+		flex-direction: column-reverse;
+	}
+	.about-item{
+		width: 100%;
+	}
+	.about-img{
+		text-align: right;
+	}
+	.about-img img{
+		width: 150px;
+		height: auto;
+	}
+	.about-item.about-center{
+		margin: 0 auto;
+		width: 90%;
+	}
+	
+	#about p{
+		font-size: 2.4rem;
+	}
+	
 	.event-box{
 		flex-direction: column;
 	}
